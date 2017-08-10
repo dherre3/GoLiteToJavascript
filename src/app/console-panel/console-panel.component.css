@@ -1,0 +1,15 @@
+.upper {
+  background-color: #fdd;
+}
+
+.lower {
+  background-color: #dfd;
+}
+
+.right {
+  background-color: #ddf;
+}
+
+.mat-tab-body .mat-tab-body-active{
+ z-index: -1;
+}

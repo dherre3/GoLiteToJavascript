@@ -1,0 +1,8 @@
+.example-header-image {
+  background-image: url('http://www.cs.mcgill.ca/~cs520/2017/images/GoLite2017_01.jpg');
+  background-size: cover;
+}
+
+.horizontal-split-separator{
+  z-index:3;
+}

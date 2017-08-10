@@ -1,0 +1,134 @@
+-n ./src/test/ml2/invalid/array1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/array2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary10.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary11.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary12.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary13.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary14.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary15.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary16.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary17.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary18.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary19.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary20.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary21.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary22.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary4.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary5.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary6.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary7.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary8.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/binary9.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/cast1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/cast2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/cast3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/cast4.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/cast5.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl4.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl5.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl6.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl7.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/decl8.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/func1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/func2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/func3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/func4.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/func5.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/invreturn1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/invreturn2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/invreturn3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/invreturn4.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/invreturn5.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/invreturn6.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/mau_shortdecl1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/mau_shortdecl2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/mau_shortdecl3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/ml2decl1top.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/ml2func2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/ml2funcTypeVardecl.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/ml2shortdec1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/nonfuncstmt.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/shortdecl1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/typedecl2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary3.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary4.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary5.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary6.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/unary7.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/vardecl1.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory
+-n ./src/test/ml2/invalid/vardecl2.go: 
+referenceTest.sh: line 101: ~cs520/golitec: No such file or directory

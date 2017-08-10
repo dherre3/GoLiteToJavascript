@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<app-toolbar (onCompile)="compile()"></app-toolbar>
+<div style="height: calc(100vh - 72px); width:100vw; border:1px solid #555" >
+  <div style="height: 100%;">
+    <horizontal-split-pane #box1  primary-component-minsize="35" secondary-component-minsize="35" local-storage-key="split-pane" primary-component-initialratio="0.9" (on-change)="onHChange($event)">
+      <div class="split-pane-content-primary" style="height:100%;">
+        <div class="lower">
+          <vertical-split-pane primary-component-minsize="35" secondary-component-minsize="35" primary-component-initialratio="0.5" >
+            <div class="split-pane-content-primary">
+              <div class="left">
+                <app-left-panel  [height]="heightPanels"></app-left-panel>
+              </div>
+            </div>
+            <div class="split-pane-content-secondary">
+              <div class="right">
+                <app-right-panel [height]="heightPanels"></app-right-panel>
+              </div>
+            </div>
+          </vertical-split-pane>
+        </div>
+      </div>
+      <div class="split-pane-content-secondary">
+        <div class="upper" style="background-color: lightgoldenrodyellow" >
+          <app-console-panel [height]="heightConsole"></app-console-panel>
+        </div>
+      </div>
+
+    </horizontal-split-pane>
+  </div>
+</div>

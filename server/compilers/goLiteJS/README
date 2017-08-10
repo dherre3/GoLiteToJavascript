@@ -1,0 +1,15 @@
+# comp520-2017-10
+COMP 520 GoLite Project
+
+Adam Bognat: 260550169
+David Herrera: 260422001
+Maurice Zhang: 260583688
+
+Milestone 1 Instructions:
+
+Milestone 2 Instructions:
+  * The filename of the Go program must always be the *first* argument to the compiler. The `-dumpsymtab` and `-pptype` flags can come after in any order. The arguments to `run.sh` are passed directly to the compiler as is.
+  We implemented the original return statements from the golite specification, that is, the implementation that did not consider break statements and that in some cases are invalid Go programs
+
+Milestone 4 Instructions:
+  * The outputted javascript file with the compiled code will be generated in whatever directory you're currently in.

@@ -1,0 +1,28 @@
+<md-tab-group position="0" (selectChange)="onTabChange($event)">
+  <md-tab label="Specs & Documents" >
+    Specs for entire project can be found at: <a href="http://www.cs.mcgill.ca/~cs520/2017/">Specs</a><br>
+  </md-tab>
+  <md-tab label="About"  style="overflow-y: scroll;">
+    <md-card class="example-card">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>GoLite to Javascript Compiler</md-card-title>
+        <md-card-subtitle>Winners of the 2017 GoLite Contest</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="http://www.cs.mcgill.ca/~cs520/2017/images/GoLite2017_01.jpg">
+      <md-card-content>
+        <p>
+          Authors: David Herrera, Adam Bognan, Maurice Zheng
+          GoLite to Javascript Compiler
+
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button >SOURCE</button>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
+  </md-tab>
+</md-tab-group>
+
