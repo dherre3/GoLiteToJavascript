@@ -32,12 +32,12 @@ extern int yylineno;
 
 /* keywords */
 %token tAPPEND tBREAK tCASE tCHAN tCONST tCONTINUE tDEFAULT tDEFER
-       tELSE tFALLTHROUGH tFOR tFUNC tGO tGOTO tIF tIMPORT 
-       tINTERFACE tMAP tPACKAGE tPRINT tPRINTLN tRANGE tRETURN tSELECT 
+       tELSE tFALLTHROUGH tFOR tFUNC tGO tGOTO tIF tIMPORT
+       tINTERFACE tMAP tPACKAGE tPRINT tPRINTLN tRANGE tRETURN tSELECT
        tSTRUCT tSWITCH tTYPE tVAR
 
 /* operators */
-%token tEQUAL tLEQ tGEQ tNEQ tAND tOR tINC tDEC tLSHIFT tRSHIFT 
+%token tEQUAL tLEQ tGEQ tNEQ tAND tOR tINC tDEC tLSHIFT tRSHIFT
        tLSHIFTEQ tRSHIFTEQ tDECLANDASSIGN tDOTS tRECEIVE tPLUSEQ
        tANDEQ tMINUSEQ tOREQ tMULTEQ tXOREQ tDIVEQ tMODEQ tBITCLEAR tCLEAREQ
 
@@ -308,7 +308,7 @@ binaryexpr: '(' binaryexpr ')' { $$ = makeEXPparen($2,@2.first_line); }
   | expression tOR expression { $$ = makeEXPbinary($1, $3, OR,@2.first_line); }
   ;
 
-functioncallexpr: expression '(' expressions ')' { $$ = makeEXPfunc($1, $3,@1.first_line); } // TODO convert casts to proper nodes (done later on)
+functioncallexpr: expression '(' expressions ')' { $$ = makeEXPfunc($1, $3,@1.first_line); }
   | expression '(' ')' { $$ = makeEXPfunc($1, NULL, @1.first_line); }
   ;
 

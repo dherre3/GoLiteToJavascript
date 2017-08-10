@@ -13,13 +13,13 @@ export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('consoleEditor') consoleEditor;
   subscription: Subscription;
   errorCode: string;
-  private _height: string;
+  public _height: string;
 
   @Input('height')
   set height(value: number) {
     if (value) {
       this._height = value + 'px';
-    }else{
+    }else {
       this._height = '100px';
     }
   }

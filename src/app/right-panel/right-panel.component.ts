@@ -11,7 +11,7 @@ export class RightPanelComponent implements OnInit, OnDestroy {
   @ViewChild('editorPrettyTyped') editorPrettyTyped;
   activeTab: number;
   subscription: Subscription;
-  private tabs: Array<{editor: any, editorContent: string}>;
+  public tabs: Array<{editor: any, editorContent: string}>;
 
   _height: string;
   @Input('height')
