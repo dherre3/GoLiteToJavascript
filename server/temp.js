@@ -27,13 +27,55 @@ let _false_0 = false;
 {
 var main = module.exports = {}; // package declaration
 let _a_0 = 0;
+var temp_ToBe_0 = _false_0;
+let _ToBe_0 = temp_ToBe_0;
+var temp_c_0 = 123.123123;
+let _c_0 = temp_c_0;
+let _d_0 = {len:0,arr:[]};
 function _main() {
 	process.stdout.write(String("Hello World"));
-	var temp_a_1 = 3;
+	var temp_a_1 = "dadas	";
 	var temp_v_0 = String.raw`
-        \t\t`;
+        		`;
+	var temp_h_0 = '	'.charCodeAt(0);
 	let _a_1 = temp_a_1;
 	let _v_0 = temp_v_0;
+	let _h_0 = temp_h_0;
+	let _t_0 = {"_b":0, "_nb":0};
+	{
+		var temp_i_0 = 0;
+		let _i_0 = temp_i_0;
+
+		for (; _i_0 < 10; (() => {_i_0--;})()) {
+			process.stdout.write(String(_a_1));
+		}
+	}
+	{
+		var temp_tag_0 = 3;
+		let _tag_0 = temp_tag_0;
+
+		switch (_tag_0) {
+
+		case 3:
+		case 2:
+		case 1:
+		case 0:
+			{
+				break;
+			}
+		case 7:
+		case 6:
+		case 5:
+		case 4:
+			{
+				break;
+			}
+		default:
+			{
+				break;
+			}
+		}
+	}
 }
 _main();
 

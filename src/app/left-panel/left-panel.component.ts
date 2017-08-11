@@ -14,9 +14,39 @@ export class LeftPanelComponent implements  OnInit {
     }
   }
   public source = `package main
+//Variable Declarations
 var a int 
+var (
+	ToBe   bool       = false
+	c float64 = 123.12312
+	d []int
+	
+)
+//Type declarations
+type intAlias int
 func main() {
-  print("Hello World")
+  //Printing
+  print("Hello World");
+  //String types, short decl
+  a, v, h := "dadas\t", \`
+        \t\t\`, '\t';
+  //Struc types
+  var t struct {
+      b int
+      nb intAlias
+  }
+  //For Loops
+  for i := 0; i < 10; i-- {
+	print(a)
+  }
+  //Switch Statements
+  
+  switch tag:=3; tag {
+    case 0, 1, 2, 3: 
+    case 4, 5, 6, 7: 
+    default:
+  }
+
 }`;
   @ViewChild('editor') editor;
   ngOnInit() {

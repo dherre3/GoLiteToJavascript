@@ -1,0 +1,17 @@
+.bottom-toolbar{
+  background-color:#3f51b5;color:rgba(255,255,255,0.87);height:15px;position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  width: 100%;text-align:center;vertical-align: middle
+}
+.font-bottom-toolbar {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-size: 12px;
+  font-family: Roboto, "Helvetica Neue", sans-serif
+}

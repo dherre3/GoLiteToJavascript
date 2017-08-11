@@ -15,6 +15,7 @@ import { ConsolePanelComponent } from './console-panel/console-panel.component';
 import { AboutComponent } from './toolbar/about/about.component';
 import { AceEditorModule } from 'ng2-ace-editor';
 import { SplitPaneModule } from 'ng2-split-pane/lib/ng2-split-pane';
+import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SplitPaneModule } from 'ng2-split-pane/lib/ng2-split-pane';
     LeftPanelComponent,
     ConsolePanelComponent,
     AboutComponent,
+    BottomToolbarComponent,
   ],
   imports: [
     BrowserModule,

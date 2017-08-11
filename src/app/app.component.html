@@ -1,5 +1,5 @@
 <app-toolbar (onCompile)="compile()"></app-toolbar>
-<div style="height: calc(100vh - 72px); width:100vw; border:1px solid #555" >
+<div style="height: calc(100vh - 80px); width:100vw; border:1px solid #555" >
   <div style="height: 100%;">
     <horizontal-split-pane #box1  primary-component-minsize="35" secondary-component-minsize="35" local-storage-key="split-pane" primary-component-initialratio="0.9" (on-change)="onHChange($event)">
       <div class="split-pane-content-primary" style="height:100%;">
@@ -25,5 +25,7 @@
       </div>
 
     </horizontal-split-pane>
+
   </div>
 </div>
+<app-bottom-toolbar></app-bottom-toolbar>
