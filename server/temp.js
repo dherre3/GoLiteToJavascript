@@ -1,7 +1,46 @@
-var utility = module.exports = {};
-var util = require('util');
+const utility = {
 //Copy array to/from
-utility.copyArrayToFrom = function copyArrayToFrom(arr,toarray)
+ copyArrayToFrom: copyArrayToFrom,
+//Makes deep copy of array
+ copyArray: copyArray,
+//Makes deep copy of object
+ copyObj: copyObj,
+//Makes copy of slice
+ copySlice: copySlice,
+//Throws error when out of bound array
+ checkIndexBounds: checkIndexBounds,
+//Throws error when out of bound slice
+ checkIndexBoundsSlice: checkIndexBoundsSlice,
+//Throws error when dividing by zeros
+ checkDivideByZero: checkDivideByZero,
+//Used to append an element onto a slice
+ appendSlice: appendSlice,
+//Deep array equality
+ arrEquals: arrEquals,
+//Deep object equality
+ objEquals: objEquals,
+};
+
+//Start of Program: temp.go 
+let _true_0 = true;
+let _false_0 = false;
+{
+var main = module.exports = {}; // package declaration
+let _a_0 = 0;
+function _main() {
+	process.stdout.write(String("Hello World"));
+	var temp_a_1 = 3;
+	var temp_v_0 = String.raw`
+        \t\t`;
+	let _a_1 = temp_a_1;
+	let _v_0 = temp_v_0;
+}
+_main();
+
+}
+/** IMPLEMENTATION OF UTILITY FUNCTIONS **/
+//Copy array to/from
+function copyArrayToFrom(arr,toarray)
 {
     var newArr = toarray;//Initializing New Array
     arr.forEach((element,index)=>{
@@ -20,12 +59,12 @@ utility.copyArrayToFrom = function copyArrayToFrom(arr,toarray)
     return newArr;
 };
 //Makes deep copy of array
-utility.copyArray = function copyArray(arr)
+function copyArray(arr)
 {
     return utility.copyArrayToFrom(arr,[]);
 };
 //Makes deep copy of object
-utility.copyObj = function copyObj(obj)
+function copyObj(obj)
 {
     var newObj = {};//Initializing Object
     for(var key in obj)
@@ -44,19 +83,19 @@ utility.copyObj = function copyObj(obj)
         }
     }    return newObj;
 };
-utility.copySlice = function copySlice(slice)
+function copySlice(slice)
 {
     return {len:slice.len, arr:slice.arr};
 };
 // Checks bounds of array and throws error, used for both arrays and slices
-utility.checkIndexBounds = function checkIndexBounds(arr, index) {
+function checkIndexBounds(arr, index) {
     if (index < 0 || index >= arr.length) {
         throw new Error('index out of range');
     } else {
         return index;
     }
 };
-utility.checkIndexBoundsSlice = function checkIndexBoundsSlice(obj, index) {
+function checkIndexBoundsSlice(obj, index) {
     if (index < 0 || index >= obj.len) {
         throw new Error('index out of range');
     } else {
@@ -64,13 +103,13 @@ utility.checkIndexBoundsSlice = function checkIndexBoundsSlice(obj, index) {
     }
 };
 //Checks division by zero and throws an error
-utility.checkDivideByZero = function(exp)
+function checkDivideByZero(exp)
 {
     if(exp===0) throw new Error('error division by zero');
     else return exp;
 };
 //Used to append an element onto a slice
-utility.appendSlice = function(slice, item)
+function appendSlice(slice, item)
 {
     if(slice.len==slice.arr.length)
     {
@@ -83,7 +122,7 @@ utility.appendSlice = function(slice, item)
     }
 };
 //Compares two arrays/slices for equality
-utility.arrEquals = function(arr1,arr2)
+function arrEquals(arr1,arr2)
 {
     if(!arr1|| arr1.constructor !== Array||!arr2|| arr2.constructor !== Array) return false;
     for(var index = 0;index<arr1.length;index++)
@@ -101,7 +140,7 @@ utility.arrEquals = function(arr1,arr2)
     return true;
 };
 //Compares two objects/structs for equality
-utility.objEquals = function(obj1,obj2)
+function objEquals(obj1,obj2)
 {
     if(!obj2||typeof obj2 !== 'object'||!obj1||typeof obj1 !== 'object') return false;
     for(var key in obj1)
@@ -117,19 +156,3 @@ utility.objEquals = function(obj1,obj2)
     }
     return true;
 };
-
-
-//Start of Program: temp.go 
-let _true_0 = true;
-let _false_0 = false;
-{
-var main = module.exports = {}; // package declaration
-let _a_0 = 0;
-function _main() {
-	process.stdout.write(String("Hello World"));
-	let _a_1 = 0;
-	let _c_0 = false;
-}
-_main();
-
-}

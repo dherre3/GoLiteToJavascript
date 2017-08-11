@@ -21,7 +21,8 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": ["../node_modules/ace-builds/src-min/ace.js"],
+      "scripts": ["../node_modules/ace-builds/src-min/ace.js","../node_modules/ace-builds/src-min/mode-golang.js",
+        "../node_modules/ace-builds/src-min/theme-xcode.js", "../node_modules/ace-builds/src-min/mode-javascript.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

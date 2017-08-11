@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 @Injectable()
 export class CompilerRequestService {
   private programSubject = new Subject<any>();
@@ -11,10 +11,11 @@ export class CompilerRequestService {
   constructor(private http: HttpClient) {}
 
   sendRequest(request: string, src: string) {
-    const req: CompilerRequest = {src: src, type: request};
-    const params = JSON.stringify(req);
-    const options = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-    this.http.post<CompilerResponse>('http://localhost:3000/compile', params, {headers: options}).subscribe( data => {
+    const options = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
+    this.http.get<CompilerResponse>('http://localhost:3000/compile', {headers: options, params: new HttpParams()
+                                        .set('src', src)
+                                        .set('type', request)})
+      .subscribe( data => {
       console.log(typeof data, data);
       if (data.code === 0) {
         this.programSubject.next(data.body);

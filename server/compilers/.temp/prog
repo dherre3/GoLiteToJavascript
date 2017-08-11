@@ -1,7 +1,8 @@
 package main
-  var a int
+var a int 
 func main() {
   print("Hello World");
-  var a int
-  var c bool
+  a, v := 3, `
+        \t\t`;
+
 }

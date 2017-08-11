@@ -1,21 +1,12 @@
--n ./src/test/ml4/valid/3-10_print_stmt.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-12_if_stmt.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-13_switch_stmt.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-14_inc_dec_stmt.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-4_return_stmt.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-4_type_cast.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-5_short_decl_stmt.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-7_assign_stmts.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/3-8_op_assign_stmt.go: 
-[0;32mVALID (both threw errors)
+./src/test/ml4/valid/3-10_print_stmt.go: [0;32mVALID
+./src/test/ml4/valid/3-12_if_stmt.go: [0;32mVALID
+./src/test/ml4/valid/3-13_switch_stmt.go: [0;32mVALID
+./src/test/ml4/valid/3-14_inc_dec_stmt.go: [0;32mVALID
+./src/test/ml4/valid/3-4_return_stmt.go: [0;32mVALID
+./src/test/ml4/valid/3-4_type_cast.go: [0;32mVALID
+./src/test/ml4/valid/3-5_short_decl_stmt.go: [0;32mVALID
+./src/test/ml4/valid/3-7_assign_stmts.go: [0;32mVALID
+./src/test/ml4/valid/3-8_op_assign_stmt.go: [0;32mVALID (both threw errors)
 *****************************
   Go output:
 *****************************
@@ -23,46 +14,37 @@ panic: runtime error: integer divide by zero
 
 goroutine 1 [running]:
 main.op_int()
-	/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/src/test/ml4/valid/3-8_op_assign_stmt.go:45 +0x11
+	/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/src/test/ml4/valid/3-8_op_assign_stmt.go:45 +0x11
 main.main()
-	/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/src/test/ml4/valid/3-8_op_assign_stmt.go:103 +0x20
+	/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/src/test/ml4/valid/3-8_op_assign_stmt.go:103 +0x20
 exit status 2
 *****************************
   JS output:
 *****************************
-/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/3-8_op_assign_stmt.js:69
+/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:228
     if(exp===0) throw new Error('error division by zero');
                 ^
 
 Error: error division by zero
-    at Object.utility.checkDivideByZero (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/3-8_op_assign_stmt.js:69:23)
-    at _op_int (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/3-8_op_assign_stmt.js:171:19)
-    at _main (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/3-8_op_assign_stmt.js:252:2)
-    at Object.<anonymous> (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/3-8_op_assign_stmt.js:257:1)
+    at Object.checkDivideByZero (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:228:23)
+    at _op_int (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:72:19)
+    at _main (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:153:2)
+    at Object.<anonymous> (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:158:1)
     at Module._compile (module.js:541:32)
     at Object.Module._extensions..js (module.js:550:10)
     at Module.load (module.js:458:32)
     at tryModuleLoad (module.js:417:12)
     at Function.Module._load (module.js:409:3)
     at Module.runMain (module.js:575:10)
--n ./src/test/ml4/valid/4-3_unary_expr.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/4-4_bin_expr.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/4-5_func_call_expr.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/4-7_select_expr.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/4-8_append_expr.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/4-9_cast_expr.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/ackermann.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/append-test.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/append_1.go: 
-[0;32mVALID (both threw errors)
+./src/test/ml4/valid/4-3_unary_expr.go: [0;32mVALID
+./src/test/ml4/valid/4-4_bin_expr.go: [0;32mVALID
+./src/test/ml4/valid/4-5_func_call_expr.go: [0;32mVALID
+./src/test/ml4/valid/4-7_select_expr.go: [0;32mVALID
+./src/test/ml4/valid/4-8_append_expr.go: [0;32mVALID
+./src/test/ml4/valid/4-9_cast_expr.go: [0;32mVALID
+./src/test/ml4/valid/ackermann.go: [0;32mVALID
+./src/test/ml4/valid/append-test.go: [0;32mVALID
+./src/test/ml4/valid/append_1.go: [0;32mVALID (both threw errors)
 *****************************
   Go output:
 *****************************
@@ -70,19 +52,19 @@ panic: runtime error: index out of range
 
 goroutine 1 [running]:
 main.main()
-	/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/src/test/ml4/valid/append_1.go:14 +0xce
+	/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/src/test/ml4/valid/append_1.go:14 +0xce
 exit status 2
 *****************************
   JS output:
 *****************************
-/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_1.js:61
+/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:103
         throw new Error('index out of range');
         ^
 
 Error: index out of range
-    at Object.checkIndexBoundsSlice (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_1.js:61:15)
-    at _main (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_1.js:138:47)
-    at Object.<anonymous> (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_1.js:140:1)
+    at Object.checkIndexBoundsSlice (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:103:15)
+    at _main (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:39:47)
+    at Object.<anonymous> (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:41:1)
     at Module._compile (module.js:541:32)
     at Object.Module._extensions..js (module.js:550:10)
     at Module.load (module.js:458:32)
@@ -90,8 +72,7 @@ Error: index out of range
     at Function.Module._load (module.js:409:3)
     at Module.runMain (module.js:575:10)
     at run (bootstrap_node.js:352:7)
--n ./src/test/ml4/valid/append_2.go: 
-[0;32mVALID (both threw errors)
+./src/test/ml4/valid/append_2.go: [0;32mVALID (both threw errors)
 *****************************
   Go output:
 *****************************
@@ -99,19 +80,19 @@ panic: runtime error: index out of range
 
 goroutine 1 [running]:
 main.main()
-	/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/src/test/ml4/valid/append_2.go:9 +0xa4
+	/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/src/test/ml4/valid/append_2.go:9 +0xa4
 exit status 2
 *****************************
   JS output:
 *****************************
-/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_2.js:61
+/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:98
         throw new Error('index out of range');
         ^
 
 Error: index out of range
-    at Object.checkIndexBoundsSlice (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_2.js:61:15)
-    at _main (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_2.js:133:47)
-    at Object.<anonymous> (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/append_2.js:135:1)
+    at Object.checkIndexBoundsSlice (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:98:15)
+    at _main (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:34:47)
+    at Object.<anonymous> (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:36:1)
     at Module._compile (module.js:541:32)
     at Object.Module._extensions..js (module.js:550:10)
     at Module.load (module.js:458:32)
@@ -119,110 +100,8 @@ Error: index out of range
     at Function.Module._load (module.js:409:3)
     at Module.runMain (module.js:575:10)
     at run (bootstrap_node.js:352:7)
--n ./src/test/ml4/valid/append_slice_ref.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/array_equal.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/assign_array.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/assign_slice.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/assign_struct.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/assignment.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/bit_clear.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/blank_id.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/comparison.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/count1bits.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/div_zero.go: 
-[0;32mVALID (both threw errors)
-*****************************
-  Go output:
-*****************************
-# command-line-arguments
-src/test/ml4/valid/div_zero.go:4: division by zero
-*****************************
-  JS output:
-*****************************
-/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/div_zero.js:69
-    if(exp===0) throw new Error('error division by zero');
-                ^
-
-Error: error division by zero
-    at Object.utility.checkDivideByZero (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/div_zero.js:69:23)
-    at _main (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/div_zero.js:128:36)
-    at Object.<anonymous> (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/div_zero.js:131:1)
-    at Module._compile (module.js:541:32)
-    at Object.Module._extensions..js (module.js:550:10)
-    at Module.load (module.js:458:32)
-    at tryModuleLoad (module.js:417:12)
-    at Function.Module._load (module.js:409:3)
-    at Module.runMain (module.js:575:10)
-    at run (bootstrap_node.js:352:7)
--n ./src/test/ml4/valid/hanoi.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/index_out_of_bounds.go: 
-[0;32mVALID (both threw errors)
-*****************************
-  Go output:
-*****************************
-# command-line-arguments
-src/test/ml4/valid/index_out_of_bounds.go:5: invalid array index 3 (out of bounds for 3-element array)
-*****************************
-  JS output:
-*****************************
-/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/index_out_of_bounds.js:54
-        throw new Error('index out of range');
-        ^
-
-Error: index out of range
-    at Object.checkIndexBounds (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/index_out_of_bounds.js:54:15)
-    at _main (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/index_out_of_bounds.js:129:43)
-    at Object.<anonymous> (/Users/davidherrera/Documents/classes/cs520/GoLite/comp520-2017-10/index_out_of_bounds.js:131:1)
-    at Module._compile (module.js:541:32)
-    at Object.Module._extensions..js (module.js:550:10)
-    at Module.load (module.js:458:32)
-    at tryModuleLoad (module.js:417:12)
-    at Function.Module._load (module.js:409:3)
-    at Module.runMain (module.js:575:10)
-    at run (bootstrap_node.js:352:7)
--n ./src/test/ml4/valid/init.go: 
-[0;31m[fail]
-*****************************
-  Go output:
-*****************************
-0
-+0.000000e+000
-
-0
-0
-0
-*****************************
-  JS output:
-*****************************
-0
-0.0000000000
-
-0
-0
-0
--n ./src/test/ml4/valid/initialization.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/insertionsort.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/isprime.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/iterativefibonacci.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/merge_sort.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/multiple.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/nested-for-loop-post.go: 
-[0;32mVALID
--n ./src/test/ml4/valid/nqueens.go: 
+./src/test/ml4/valid/append_slice_ref.go: [0;32mVALID
+./src/test/ml4/valid/array_equal.go: [0;32mVALID
+./src/test/ml4/valid/assign_array.go: [0;32mVALID
+./src/test/ml4/valid/assign_slice.go: [0;32mVALID
+./src/test/ml4/valid/assign_struct.go: 

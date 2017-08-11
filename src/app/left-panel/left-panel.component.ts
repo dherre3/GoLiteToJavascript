@@ -6,7 +6,6 @@ declare var ace: any;
   styleUrls: ['./left-panel.component.css']
 })
 export class LeftPanelComponent implements  OnInit {
-
   _height: string;
   @Input('height')
   set height(value: number) {
@@ -14,12 +13,11 @@ export class LeftPanelComponent implements  OnInit {
       this._height = value + 'px';
     }
   }
-  public source = `package main;
-  var a:int;
+  public source = `package main
+var a int 
 func main() {
-  print("Hello World")'
+  print("Hello World")
 }`;
-  @ViewChild('highlight') highlight;
   @ViewChild('editor') editor;
   ngOnInit() {
     this.editor.setTheme('xcode');

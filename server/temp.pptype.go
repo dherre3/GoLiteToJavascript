@@ -5,8 +5,12 @@ func main() {
 		"Hello World":string
 	*/
 	print("Hello World")
-	var a int
-
-	var c bool
-
+	/*
+		3:int
+	*/
+	/*
+		`
+        \t\t`:string	*/
+	a, v := 3, `
+        \t\t`;
 }

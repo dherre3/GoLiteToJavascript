@@ -20,12 +20,14 @@ void codePROGRAM(PROGRAM *p)
     char *codeFileName;
     codeFileName = concat(filename,".js");
     codeFP = fopen(codeFileName,"w+");
-    codePREDIFINEDLibrary();
+    codePREDIFINEDHEADERSLibrary();
+    fprintf(codeFP,"\n//Start of Program: %s.go \nlet _true_0 = true;\nlet _false_0 = false;\n",filename);
     fprintf(codeFP,"{\n");
     codePACKAGE(p->pack_decl);
     codeTOPDECL(p->top_decl);
     fprintf(codeFP, "_main();\n"); // call the main function, if it doesn't exist, it'll throw an error just like in Go
     fprintf(codeFP,"\n}");
+    codePREDIFINEDSOURCELibrary();
     fclose(codeFP);
 }
 
@@ -44,7 +46,7 @@ void codeTOPDECL(TOP_DECL* top_decl)
         codeTOPDECL(top_decl->next);
         switch(top_decl->kind)
         {
-            case varK:   
+            case varK:
                 codeVARDECL(top_decl->val.var_decl, 0);
                 break;
             case functionK:
@@ -55,7 +57,7 @@ void codeTOPDECL(TOP_DECL* top_decl)
                 break;
         }
     }
-    
+
 }
 int is_blank_id(EXP *e)
 {
@@ -66,13 +68,13 @@ void codeVARDECL(VAR_DECL *v,int tabs)
     if(v!=NULL)
     {
         codeVARDECL(v->next,tabs);
-        if(v->expressions!=NULL) 
+        if(v->expressions!=NULL)
         {
             codeVARDECLvartemp(v->ids,v->expressions,tabs);
             codeVARDECLexp(v->ids,v->expressions,tabs);
         }else{
-            codeVARDECLsimple(v->ids,tabs); 
-        }  
+            codeVARDECLsimple(v->ids,tabs);
+        }
     }
 
 }
@@ -98,7 +100,7 @@ void codeVARDECLexp(IDENTIFIER *id,EXP *e, int tabs)
     {
         codeVARDECLexp(id->next,e->next, tabs);
         if(strcmp(id->name,"_")!=0)
-        {  
+        {
             TYPE *t = get_root_type(id->type);
             if(e->kind == appendK&&t&&t->typeK == sliceK)
             {
@@ -112,9 +114,9 @@ void codeVARDECLexp(IDENTIFIER *id,EXP *e, int tabs)
                 fprintf(codeFP, "_%s.len = %s.len+1;\n",getIDName(id), concat("temp_",getIDName(id)));
             }else{
                 codeTABS(tabs);
-                fprintf(codeFP, "let _%s = temp_%s;\n",getIDName(id),getIDName(id));  
+                fprintf(codeFP, "let _%s = temp_%s;\n",getIDName(id),getIDName(id));
             }
-            
+
         }
     }
 }
@@ -128,7 +130,7 @@ void codeVARDECLsimple(IDENTIFIER *id, int tabs)
         {
             codeTABS(tabs);
             fprintf(codeFP, "let ");
-            fprintf(codeFP, "_%s", getIDName(id));            
+            fprintf(codeFP, "_%s", getIDName(id));
             fprintf(codeFP, " = ");
             initializeType(id->type);
             fprintf(codeFP, ";\n");
@@ -138,10 +140,10 @@ void codeVARDECLsimple(IDENTIFIER *id, int tabs)
 void initializeType(TYPE *t)
 {
     //enum {idTK, arrayK, structK, sliceK, parentK, intK,boolK,floatK,runeK,stringK} typeK;
-    
+
     if(t!=NULL)
     {
-        
+
         switch(t->typeK)
         {
             case arrayK:
@@ -191,7 +193,7 @@ void initializeSTRUCTtype(STRUCT_DECL *struct_decl)
     {
         initializeSTRUCTtype(struct_decl->next);
         if(struct_decl->next!=NULL) fprintf(codeFP, ", ");
-        initializeSTRUCTfields(struct_decl->ids); 
+        initializeSTRUCTfields(struct_decl->ids);
     }
 }
 void initializeSTRUCTfields(IDENTIFIER *id)
@@ -201,7 +203,7 @@ void initializeSTRUCTfields(IDENTIFIER *id)
         initializeSTRUCTfields(id->next);
         if(id->next!=NULL) fprintf(codeFP, ", ");
         fprintf(codeFP, "\"_%s\":",id->name);
-        initializeType(id->type);  
+        initializeType(id->type);
     }
 
 }
@@ -259,11 +261,11 @@ void codeFOR(FOR_STMT *forS, int tabs) {
     if(forS->poststmt!=NULL)
     {
         fprintf(codeFP,"; (() => {");
-        codeSTATEMENT(forS->poststmt, 0);    
+        codeSTATEMENT(forS->poststmt, 0);
         remove_newline();
-        fprintf(codeFP, "})()) {\n");    
+        fprintf(codeFP, "})()) {\n");
 
-         
+
     }else{
         fprintf(codeFP,"; ){\n");
     }
@@ -285,7 +287,7 @@ void codeIFELSE(IFELSE *ifelse,int tabs)
     fprintf(codeFP,"\n");
     codeTABS(tabs + 1);
     fprintf(codeFP,"if (");
-    
+
     codeEXP(ifelse->condition, 1);
 
     fprintf(codeFP,") {\n");
@@ -470,14 +472,14 @@ void codeDECLlet(IDENTIFIER *id,EXP*e, int tabs)
 {
     if(id&&e)
     {
-        
+
         codeDECLlet(id->next,e->next, tabs);
         if(strcmp(id->name,"_"))
         {
             TYPE *t = get_root_type(id->type);
             if(e->kind==appendK&&t->typeK==sliceK)
             {
-                
+
                 if(!id->is_defined_in_scope)
                 {
                     codeTABS(tabs);
@@ -493,14 +495,14 @@ void codeDECLlet(IDENTIFIER *id,EXP*e, int tabs)
                 codeTABS(tabs);
                 if(id->is_defined_in_scope)
                 {
-                    
+
                     fprintf(codeFP, "_%s = %s;\n",getIDName(id), concat("temp_",getIDName(id)));
                 }else{
                     fprintf(codeFP, "let _%s = %s;\n",getIDName(id), concat("temp_",getIDName(id)));
                 }
             }
-            
-            
+
+
         }
     }
 }
@@ -512,7 +514,7 @@ void codeASSIGN(EXP *left, EXP*right, ASSIGN_TYPE t, int tabs)
         codeASSIGNexp(left,right,t,0,tabs);
     }
 
-    
+
 }
 void codeASSIGNvartemp(EXP *left, EXP *right,ASSIGN_TYPE t, int countTemp,int tabs)
 {
@@ -525,7 +527,7 @@ void codeASSIGNvartemp(EXP *left, EXP *right,ASSIGN_TYPE t, int countTemp,int ta
             fprintf(codeFP, "var temp_%d = ",countTemp);
             codeEXP(right,0);
             fprintf(codeFP, ";\n");
-        }   
+        }
 
     }
 }
@@ -556,7 +558,7 @@ void codeASSIGNexp(EXP *left,EXP *right, ASSIGN_TYPE t, int countTemp, int tabs)
                 codeTABS(tabs);
                 codeEXP(left,1);
                 fprintf(codeFP," ");
-                codeASSIGN_TYPE(t); 
+                codeASSIGN_TYPE(t);
                 fprintf(codeFP, " utility.checkDivideByZero(temp_%d);\n",countTemp);
 
                 if (is_integer_type(get_root_type(left->type))) {
@@ -585,14 +587,14 @@ void codeASSIGNexp(EXP *left,EXP *right, ASSIGN_TYPE t, int countTemp, int tabs)
                     codeTABS(tabs);
                     codeEXP(left,1);
                     fprintf(codeFP," ");
-                    codeASSIGN_TYPE(t); 
+                    codeASSIGN_TYPE(t);
                     fprintf(codeFP, " temp_%d;\n",countTemp);
                 }
-                
+
 
             }
         }
-        
+
     }
 }
 
@@ -651,18 +653,18 @@ void codeIDLIST(IDENTIFIER *id)
 {
     if(id!= NULL)
     {
-        
+
         codeIDLIST(id->next);
         if(id->next!=NULL)fprintf(codeFP,", ");
         fprintf(codeFP,"%s", getIDName(id));
-        
+
     }
 }
 void codePARAMETERS(IDENTIFIER *id)
 {
     if(id!= NULL)
     {
-        
+
         codePARAMETERS(id->next);
         if(id->next!=NULL)fprintf(codeFP,", ");
         fprintf(codeFP,"_%s", getIDName(id));
@@ -717,7 +719,7 @@ void codeFUNCCALL(EXP *exp) {
         while (func_id->kind == parenK) {
           func_id = func_id->val.parenE.exp;
         }
-    
+
         fprintf(codeFP, "_%s", func_id->val.idE.id->name);
         fprintf(codeFP, "(");
         codeFUNCCALLEXPS(params);
@@ -727,7 +729,7 @@ void codeFUNCCALL(EXP *exp) {
 
 void codeEXP(EXP *e, int isLHS)
 {
-    
+
     if(e!=NULL)
     {
         TYPE *t;
@@ -736,7 +738,7 @@ void codeEXP(EXP *e, int isLHS)
         switch(e->kind)
         {
             case idK:
-                
+
                 if(t->typeK == arrayK && !isLHS)
                 {
                     fprintf(codeFP,"utility.copyArray(_%s)", getIDName(e->val.idE.id));
@@ -772,9 +774,9 @@ void codeEXP(EXP *e, int isLHS)
                 if(t->typeK == arrayK&&!isLHS)fprintf(codeFP,"utility.copyArray(");
                 else if(t->typeK == structK&&!isLHS)fprintf(codeFP,"utility.copyObj(");
                 codeEXP(e->val.structfieldE.structval, 1);
-                fprintf(codeFP,".");  
-                fprintf(codeFP,"_%s",e->val.structfieldE.field->name); 
-                if((t->typeK == structK||t->typeK == arrayK)&&!isLHS) fprintf(codeFP,")");        
+                fprintf(codeFP,".");
+                fprintf(codeFP,"_%s",e->val.structfieldE.field->name);
+                if((t->typeK == structK||t->typeK == arrayK)&&!isLHS) fprintf(codeFP,")");
                 break;
             case arrayaccessK:
                 if(t->typeK == arrayK&&!isLHS)fprintf(codeFP,"utility.copyArray(");
@@ -783,19 +785,19 @@ void codeEXP(EXP *e, int isLHS)
                 if(tsl&&tsl->typeK==sliceK)
                 {
                     codeEXP(e->val.arrayaccessE.arrayval, 1);
-                    fprintf(codeFP,".arr[");  
-                    fprintf(codeFP,"utility.checkIndexBoundsSlice(");  
+                    fprintf(codeFP,".arr[");
+                    fprintf(codeFP,"utility.checkIndexBoundsSlice(");
                     codeEXP(e->val.arrayaccessE.arrayval, 1);
-                    fprintf(codeFP,", ");  
+                    fprintf(codeFP,", ");
                     codeEXP(e->val.arrayaccessE.index, 1);
                     fprintf(codeFP,")]");
                 }else{
-                    
+
                     codeEXP(e->val.arrayaccessE.arrayval, 1);
                     fprintf(codeFP,"[");
-                    fprintf(codeFP,"utility.checkIndexBounds(");  
+                    fprintf(codeFP,"utility.checkIndexBounds(");
                     codeEXP(e->val.arrayaccessE.arrayval, 1);
-                    fprintf(codeFP,", ");  
+                    fprintf(codeFP,", ");
                     codeEXP(e->val.arrayaccessE.index, 1);
                     fprintf(codeFP,")]");
                 }
@@ -804,10 +806,10 @@ void codeEXP(EXP *e, int isLHS)
             case appendK:
                 fprintf(codeFP, "utility.appendSlice(");
                 codeEXP(e->val.appendE.left,isLHS);
-                fprintf(codeFP,",");    
+                fprintf(codeFP,",");
                 codeEXP(e->val.appendE.right, isLHS);
                 fprintf(codeFP,")");
-                break;    
+                break;
             case binaryK:
                 codeBinary(e->val.binaryE.left,e->val.binaryE.right,e->val.binaryE.op);
                 break;
@@ -835,7 +837,7 @@ void codeUnary(EXP *e, OP op, int isLHS)
 }
 void codeBinary(EXP *left, EXP *right, OP op)
 {
-    TYPE *lt = get_root_type(left->type);   
+    TYPE *lt = get_root_type(left->type);
     TYPE *rt = get_root_type(right->type);
     int arr = (lt->typeK==arrayK&&rt->typeK==arrayK);
     int str = (lt->typeK==structK&&rt->typeK==structK);
@@ -863,7 +865,7 @@ void codeBinary(EXP *left, EXP *right, OP op)
         if (is_int_division) {
             fprintf(codeFP,"Math.trunc(");
         }
-        
+
         codeEXP(left, 1);
         codeOP(op);
         fprintf(codeFP,"utility.checkDivideByZero(");
@@ -954,14 +956,15 @@ void codeTABS(int tabs)
         fprintf(codeFP, "\t");
     }
 }
-void codePREDIFINEDLibrary()
+void codePREDIFINEDHEADERSLibrary()
 {
-    copyUtilCode();
-    fprintf(codeFP,"\n//Start of Program: %s.go \nlet _true_0 = true;\nlet _false_0 = false;\n",filename);
+    fprintf(codeFP, "%s", jsutilsHeaders);
+
 }
-void copyUtilCode()
+void codePREDIFINEDSOURCELibrary()
 {
-    fprintf(codeFP, "%s", jsutils);
+    fprintf(codeFP, "%s", jsutilsSrc);
+
 }
 void remove_newline()
 {
