@@ -36,7 +36,7 @@ function _main() {
 	process.stdout.write(String("Hello World"));
 	var temp_a_1 = "dadas	";
 	var temp_v_0 = String.raw`
-        		`;
+    `;
 	var temp_h_0 = '	'.charCodeAt(0);
 	let _a_1 = temp_a_1;
 	let _v_0 = temp_v_0;
@@ -50,32 +50,9 @@ function _main() {
 			process.stdout.write(String(_a_1));
 		}
 	}
-	{
-		var temp_tag_0 = 3;
-		let _tag_0 = temp_tag_0;
-
-		switch (_tag_0) {
-
-		case 3:
-		case 2:
-		case 1:
-		case 0:
-			{
-				break;
-			}
-		case 7:
-		case 6:
-		case 5:
-		case 4:
-			{
-				break;
-			}
-		default:
-			{
-				break;
-			}
-		}
-	}
+	var temp_0 = utility.appendSlice(utility.copySlice(_d_0),3);
+	(_d_0).arr  =  temp_0.arr;
+	(_d_0).len =  temp_0.len+1;
 }
 _main();
 

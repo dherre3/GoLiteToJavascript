@@ -20,11 +20,11 @@ func main() {
 	*/
 	/*
 		`
-        		`:string	*/
+    `:string	*/
 	/*
 		'	':rune	*/
 	a, v, h := "dadas	", `
-        		`, '	';
+    `, '	';
 	var t struct{
 			b int
 			nb intAlias
@@ -48,38 +48,12 @@ func main() {
 		print(a)
 	}
 	/*
-		3:int
+		d:[]int
 	*/
 	/*
-		tag:int
+  		append(d,3): []int
+		d:[]int
+		3:int
 	*/
-	switch tag := 3;tag{
-		/*
-			0:int
-		*/
-		/*
-			1:int
-		*/
-		/*
-			2:int
-		*/
-		/*
-			3:int
-		*/
-		case 0, 1, 2, 3:
-		/*
-			4:int
-		*/
-		/*
-			5:int
-		*/
-		/*
-			6:int
-		*/
-		/*
-			7:int
-		*/
-		case 4, 5, 6, 7:
-		default:
-	}
+  	d = append(d,3)
 }

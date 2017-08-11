@@ -28,9 +28,9 @@ func main() {
   //Printing
   print("Hello World");
   //String types, short decl
-  a, v, h := "dadas\t", \`
-        \t\t\`, '\t';
-  //Struc types
+  a, v, h := "dadas	", \`
+    \`, '	';
+  //Struct types
   var t struct {
       b int
       nb intAlias
@@ -39,14 +39,8 @@ func main() {
   for i := 0; i < 10; i-- {
 	print(a)
   }
-  //Switch Statements
-  
-  switch tag:=3; tag {
-    case 0, 1, 2, 3: 
-    case 4, 5, 6, 7: 
-    default:
-  }
-
+  //Appending slice
+  d = append(d,3);
 }`;
   @ViewChild('editor') editor;
   ngOnInit() {
