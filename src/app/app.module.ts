@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { ScriptComponent } from './script/script.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RightPanelComponent } from './right-panel/right-panel.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
@@ -20,7 +19,6 @@ import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.componen
 @NgModule({
   declarations: [
     AppComponent,
-    ScriptComponent,
     ToolbarComponent,
     RightPanelComponent,
     LeftPanelComponent,
