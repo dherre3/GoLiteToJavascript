@@ -1,26 +1,16 @@
+// Utility functions
 const utility = {
-//Copy array to/from
  copyArrayToFrom: copyArrayToFrom,
-//Makes deep copy of array
  copyArray: copyArray,
-//Makes deep copy of object
  copyObj: copyObj,
-//Makes copy of slice
  copySlice: copySlice,
-//Throws error when out of bound array
  checkIndexBounds: checkIndexBounds,
-//Throws error when out of bound slice
  checkIndexBoundsSlice: checkIndexBoundsSlice,
-//Throws error when dividing by zeros
  checkDivideByZero: checkDivideByZero,
-//Used to append an element onto a slice
  appendSlice: appendSlice,
-//Deep array equality
  arrEquals: arrEquals,
-//Deep object equality
  objEquals: objEquals,
 };
-
 //Start of Program: temp.go 
 let _true_0 = true;
 let _false_0 = false;

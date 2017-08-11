@@ -1,26 +1,17 @@
 char *jsutilsHeaders =
+"// Utility functions\n"
 "const utility = {\n"
-"//Copy array to/from\n"
 " copyArrayToFrom: copyArrayToFrom,\n"
-"//Makes deep copy of array\n"
 " copyArray: copyArray,\n"
-"//Makes deep copy of object\n"
 " copyObj: copyObj,\n"
-"//Makes copy of slice\n"
 " copySlice: copySlice,\n"
-"//Throws error when out of bound array\n"
 " checkIndexBounds: checkIndexBounds,\n"
-"//Throws error when out of bound slice\n"
 " checkIndexBoundsSlice: checkIndexBoundsSlice,\n"
-"//Throws error when dividing by zeros\n"
 " checkDivideByZero: checkDivideByZero,\n"
-"//Used to append an element onto a slice\n"
 " appendSlice: appendSlice,\n"
-"//Deep array equality\n"
 " arrEquals: arrEquals,\n"
-"//Deep object equality\n"
 " objEquals: objEquals,\n"
-"};\n";
+"};";
 
 char *jsutilsSrc =
 "\n/** IMPLEMENTATION OF UTILITY FUNCTIONS **/\n"
