@@ -1,0 +1,36 @@
+[TAILING] Tailing last 15 lines for [minerva] process (change the value with --lines option)
+/Users/davidherrera/.pm2/logs/minerva-error-0.log last 15 lines:
+0|minerva  |     at ClientRequest.emit (events.js:188:7)
+0|minerva  |     at TLSSocket.socketErrorListener (_http_client.js:308:9)
+0|minerva  |     at emitOne (events.js:96:13)
+0|minerva  |     at TLSSocket.emit (events.js:188:7)
+0|minerva  | ReferenceError: window is not defined
+0|minerva  |     at Request.request.post [as _callback] (/Users/davidherrera/Documents/Projects/deamon-minerva-classes/renderer.js:42:42)
+0|minerva  |     at self.callback (/Users/davidherrera/Documents/Projects/deamon-minerva-classes/node_modules/request/request.js:188:22)
+0|minerva  |     at emitOne (events.js:96:13)
+0|minerva  |     at Request.emit (events.js:188:7)
+0|minerva  |     at Request.onRequestError (/Users/davidherrera/Documents/Projects/deamon-minerva-classes/node_modules/request/request.js:884:8)
+0|minerva  |     at emitOne (events.js:96:13)
+0|minerva  |     at ClientRequest.emit (events.js:188:7)
+0|minerva  |     at TLSSocket.socketOnEnd (_http_client.js:344:9)
+0|minerva  |     at emitNone (events.js:91:20)
+0|minerva  |     at TLSSocket.emit (events.js:185:7)
+
+/Users/davidherrera/.pm2/logs/minerva-out-0.log last 15 lines:
+0|minerva  | --> 
+0|minerva  | 
+0|minerva  | --> 
+0|minerva  | 
+0|minerva  | --> 
+0|minerva  | 
+0|minerva  | { msg: 'WELCOME <b>Welcome, David F. Herrera Rodriguez, to Minerva - McGill\'s Administrative Systems!</b>Aug 11, 201711:41 AM',
+0|minerva  |   name: 'bmenu.P_MainMnu' }
+0|minerva  | --> 
+0|minerva  | 
+0|minerva  | --> 
+0|minerva  | 
+0|minerva  | --> 
+0|minerva  | 
+0|minerva  | Not yet, fuck!!
+
+[STREAMING] Now streaming realtime logs for [minerva] process

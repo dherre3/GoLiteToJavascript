@@ -1,4 +1,5 @@
 <div [ngStyle]="{'height':_height}" style="z-index: 4">
-  <ace-editor #consoleEditor  [(text)]="errorCode" [mode]="'text'" [options]="{maxLines: 'Infinity'}"
-              style="min-height: 100%;width:100vw; overflow: auto;z-index: 4;color:red;background-color: lightgoldenrodyellow" ></ace-editor>
+  <ace-editor #consoleEditor  [(text)]="code" [mode]="'text'" [options]="{maxLines: 'Infinity'}"
+              style="min-height: 100%;width:100vw; overflow: auto;z-index: 4;background-color: lightgoldenrodyellow"
+              [ngStyle]="{'color': codeColor}"></ace-editor>
 </div>

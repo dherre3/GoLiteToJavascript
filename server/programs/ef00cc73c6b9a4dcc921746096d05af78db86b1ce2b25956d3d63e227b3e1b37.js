@@ -11,7 +11,7 @@ const utility = {
  arrEquals: arrEquals,
  objEquals: objEquals,
 };
-//Start of Program: temp.go 
+//Start of Program: ef00cc73c6b9a4dcc921746096d05af78db86b1ce2b25956d3d63e227b3e1b37.go 
 let _true_0 = true;
 let _false_0 = false;
 {
@@ -24,25 +24,16 @@ let _c_0 = temp_c_0;
 let _d_0 = {len:0,arr:[]};
 function _main() {
 	process.stdout.write(String("Hello World"));
-	var temp_a_1 = "dadas	";
-	var temp_v_0 = String.raw`
-    `;
-	var temp_h_0 = '	'.charCodeAt(0);
-	let _a_1 = temp_a_1;
-	let _v_0 = temp_v_0;
-	let _h_0 = temp_h_0;
-	let _t_0 = {"_b":0, "_nb":0};
-	{
-		var temp_i_0 = 0;
-		let _i_0 = temp_i_0;
-
-		for (; _i_0 < 10; (() => {_i_0--;})()) {
-			process.stdout.write(String(_a_1));
-		}
-	}
 	var temp_0 = utility.appendSlice(utility.copySlice(_d_0),3);
 	(_d_0).arr  =  temp_0.arr;
 	(_d_0).len =  temp_0.len+1;
+	var temp_0 = utility.appendSlice(utility.copySlice(_d_0),5);
+	(_d_0).arr  =  temp_0.arr;
+	(_d_0).len =  temp_0.len+1;
+	var temp_0 = utility.appendSlice(utility.copySlice(_d_0),10);
+	(_d_0).arr  =  temp_0.arr;
+	(_d_0).len =  temp_0.len+1;
+	process.stdout.write(String(_d_0.arr[utility.checkIndexBoundsSlice(_d_0, 0)]) + String(_d_0.arr[utility.checkIndexBoundsSlice(_d_0, 1)]) + String(_d_0.arr[utility.checkIndexBoundsSlice(_d_0, 2)]));
 }
 _main();
 

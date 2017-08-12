@@ -11,8 +11,11 @@ declare const ace: any;
 })
 export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('consoleEditor') consoleEditor;
-  subscription: Subscription;
-  errorCode: string;
+  subscriptionError: Subscription;
+  subscriptionRun: Subscription;
+  subscriptionClear: Subscription;
+  code: string;
+  codeColor: string;
   public _height: string;
 
   @Input('height')
@@ -27,7 +30,15 @@ export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   constructor(private compilerRequestServer: CompilerRequestService) {
-    this.subscription = compilerRequestServer.errorAnnounced$.subscribe( error => {this.errorCode = error; });
+    this.subscriptionClear = compilerRequestServer.clearAnnounced$.subscribe(res => this.code = '');
+    this.subscriptionError = compilerRequestServer.errorAnnounced$.subscribe( error => {
+      this.code = error;
+      this.codeColor = 'red';
+    });
+    this.subscriptionRun = compilerRequestServer.runAnnounced$.subscribe(res => {
+      this.code = res;
+      this.codeColor = 'green';
+    });
   }
 
 
@@ -39,6 +50,8 @@ export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
     this.consoleEditor.getEditor().setReadOnly(true);
   }
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.subscriptionError.unsubscribe();
+    this.subscriptionRun.unsubscribe();
+    this.subscriptionClear.unsubscribe();
   }
 }

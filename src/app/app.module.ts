@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {  MdToolbarModule, MdIconModule, MdButtonModule,
-          MdGridListModule, MdDialogModule, MdCardModule, MdTabsModule } from '@angular/material';
+          MdGridListModule, MdDialogModule, MdCardModule, MdTabsModule, MdProgressBarModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -30,7 +30,6 @@ import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.componen
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     MdToolbarModule,
     MdIconModule,
     MdButtonModule,
@@ -39,7 +38,9 @@ import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.componen
     MdCardModule,
     AceEditorModule,
     MdTabsModule,
-    SplitPaneModule
+    SplitPaneModule,
+    MdProgressBarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

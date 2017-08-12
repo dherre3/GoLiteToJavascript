@@ -27,18 +27,6 @@ type intAlias int
 func main() {
   //Printing
   print("Hello World");
-  //String types, short decl
-  a, v, h := "dadas	", \`
-    \`, '	';
-  //Struct types
-  var t struct {
-      b int
-      nb intAlias
-  }
-  //For Loops
-  for i := 0; i < 10; i-- {
-	print(a)
-  }
   //Appending slice
   d = append(d,3);
 }`;

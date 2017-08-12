@@ -1,0 +1,13 @@
+[0;31m[fail]
+*****************************
+  Go output:
+*****************************
+# command-line-arguments
+./f02890c139fe537fbbe3d119d2ce6d4fcd6bff0bf5d9cb1742d803283fcf9692.go:17: a declared and not used
+./f02890c139fe537fbbe3d119d2ce6d4fcd6bff0bf5d9cb1742d803283fcf9692.go:17: v declared and not used
+./f02890c139fe537fbbe3d119d2ce6d4fcd6bff0bf5d9cb1742d803283fcf9692.go:17: h declared and not used
+./f02890c139fe537fbbe3d119d2ce6d4fcd6bff0bf5d9cb1742d803283fcf9692.go:22: t declared and not used
+*****************************
+  JS output:
+*****************************
+Hello World

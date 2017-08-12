@@ -1,14 +1,21 @@
 <md-toolbar color="primary" style="justify-content: center"  >
 
   <span >GoLite To Javascript Compiler </span>
-
   <span style="flex: 3 1 auto;text-align: center">
 
-    <button md-raised-button color="primary" (click)="compiler()"><md-icon >build</md-icon>Compile</button>
+    <button md-raised-button color="primary" (click)="compiler()"><md-icon >build</md-icon>Compile & Run
+
+    </button>
 </span>
 
   <span class="example-spacer"></span>
-  <button md-icon-button class="run-button" (click)="openAbout()"><md-icon class="md-24">info_outline</md-icon></button>
+  <button md-icon-button class="run-button" (click)="openAbout()"><md-icon class="md-24">info_outline</md-icon>
+
+  </button>
 
 
 </md-toolbar>
+<div *ngIf="loading">
+  <md-progress-bar  mode="indeterminate" color="accent"  ></md-progress-bar>
+
+</div>
