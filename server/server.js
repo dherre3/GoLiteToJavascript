@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-shell.cd('programs');
+shell.cd(`${__dirname}/programs`);
 app.get('/compile', function (req, res) {
   res.header("Access-Control-Allow-Origin", "*");
   if(req.query.type === 'GoToJS')

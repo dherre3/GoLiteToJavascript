@@ -4,7 +4,9 @@
 /dist
 /tmp
 /out-tsc
-
+server/compilers/goLiteJS/src/*.go
+server/compilers/goLiteJS/src/*.js
+/server/programs/
 # dependencies
 /node_modules
 

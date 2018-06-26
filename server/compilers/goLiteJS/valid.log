@@ -1,11 +1,156 @@
-./src/test/ml4/valid/3-10_print_stmt.go: [0;32mVALID
-./src/test/ml4/valid/3-12_if_stmt.go: [0;32mVALID
-./src/test/ml4/valid/3-13_switch_stmt.go: [0;32mVALID
-./src/test/ml4/valid/3-14_inc_dec_stmt.go: [0;32mVALID
-./src/test/ml4/valid/3-4_return_stmt.go: [0;32mVALID
-./src/test/ml4/valid/3-4_type_cast.go: [0;32mVALID
-./src/test/ml4/valid/3-5_short_decl_stmt.go: [0;32mVALID
-./src/test/ml4/valid/3-7_assign_stmts.go: [0;32mVALID
+./src/test/ml4/valid/3-10_print_stmt.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+3 hello 99 true
+\t\n
+	 
+	 10
+	   
+	\
+`960  0
+00
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-10_print_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-12_if_stmt.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+1 2
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-12_if_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-13_switch_stmt.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+1
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-13_switch_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-14_inc_dec_stmt.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+101010
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-14_inc_dec_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-4_return_stmt.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-4_return_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-4_type_cast.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+3
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-4_type_cast.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-5_short_decl_stmt.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+1
+2 3
+4 5
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-5_short_decl_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/3-7_assign_stmts.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+c==de==fa==b00e==fa==bfalsefalse00
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-7_assign_stmts.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
 ./src/test/ml4/valid/3-8_op_assign_stmt.go: [0;32mVALID (both threw errors)
 *****************************
   Go output:
@@ -21,87 +166,126 @@ exit status 2
 *****************************
   JS output:
 *****************************
-/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:228
-    if(exp===0) throw new Error('error division by zero');
-                ^
+module.js:538
+    throw err;
+    ^
 
-Error: error division by zero
-    at Object.checkDivideByZero (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:228:23)
-    at _op_int (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:72:19)
-    at _main (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:153:2)
-    at Object.<anonymous> (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js:158:1)
-    at Module._compile (module.js:541:32)
-    at Object.Module._extensions..js (module.js:550:10)
-    at Module.load (module.js:458:32)
-    at tryModuleLoad (module.js:417:12)
-    at Function.Module._load (module.js:409:3)
-    at Module.runMain (module.js:575:10)
-./src/test/ml4/valid/4-3_unary_expr.go: [0;32mVALID
-./src/test/ml4/valid/4-4_bin_expr.go: [0;32mVALID
-./src/test/ml4/valid/4-5_func_call_expr.go: [0;32mVALID
-./src/test/ml4/valid/4-7_select_expr.go: [0;32mVALID
-./src/test/ml4/valid/4-8_append_expr.go: [0;32mVALID
-./src/test/ml4/valid/4-9_cast_expr.go: [0;32mVALID
-./src/test/ml4/valid/ackermann.go: [0;32mVALID
-./src/test/ml4/valid/append-test.go: [0;32mVALID
-./src/test/ml4/valid/append_1.go: [0;32mVALID (both threw errors)
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/3-8_op_assign_stmt.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/4-3_unary_expr.go: [0;31m[fail]
 *****************************
   Go output:
 *****************************
-panic: runtime error: index out of range
-
-goroutine 1 [running]:
-main.main()
-	/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/src/test/ml4/valid/append_1.go:14 +0xce
-exit status 2
+0
+0
+0
+0
+-1
+-1
+true
+0
+0
+0
+0
+-1
+-1
+true
 *****************************
   JS output:
 *****************************
-/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:103
-        throw new Error('index out of range');
-        ^
+module.js:538
+    throw err;
+    ^
 
-Error: index out of range
-    at Object.checkIndexBoundsSlice (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:103:15)
-    at _main (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:39:47)
-    at Object.<anonymous> (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_1.js:41:1)
-    at Module._compile (module.js:541:32)
-    at Object.Module._extensions..js (module.js:550:10)
-    at Module.load (module.js:458:32)
-    at tryModuleLoad (module.js:417:12)
-    at Function.Module._load (module.js:409:3)
-    at Module.runMain (module.js:575:10)
-    at run (bootstrap_node.js:352:7)
-./src/test/ml4/valid/append_2.go: [0;32mVALID (both threw errors)
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/4-3_unary_expr.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/4-4_bin_expr.go: [0;31m[fail]
 *****************************
   Go output:
 *****************************
-panic: runtime error: index out of range
-
-goroutine 1 [running]:
-main.main()
-	/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/src/test/ml4/valid/append_2.go:9 +0xa4
-exit status 2
+84
+172
+golitegolite
+0
+0
+1764
+7396
+1
+1
+0
+0
+42
+86
+42
+86
+0
+0
+0
+0
+true
+true
+true
+true
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+true
+true
+true
+false
+false
+false
+false
+true
+true
+true
+true
 *****************************
   JS output:
 *****************************
-/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:98
-        throw new Error('index out of range');
-        ^
+module.js:538
+    throw err;
+    ^
 
-Error: index out of range
-    at Object.checkIndexBoundsSlice (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:98:15)
-    at _main (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:34:47)
-    at Object.<anonymous> (/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/append_2.js:36:1)
-    at Module._compile (module.js:541:32)
-    at Object.Module._extensions..js (module.js:550:10)
-    at Module.load (module.js:458:32)
-    at tryModuleLoad (module.js:417:12)
-    at Function.Module._load (module.js:409:3)
-    at Module.runMain (module.js:575:10)
-    at run (bootstrap_node.js:352:7)
-./src/test/ml4/valid/append_slice_ref.go: [0;32mVALID
-./src/test/ml4/valid/array_equal.go: [0;32mVALID
-./src/test/ml4/valid/assign_array.go: [0;32mVALID
-./src/test/ml4/valid/assign_slice.go: [0;32mVALID
-./src/test/ml4/valid/assign_struct.go: 
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/4-4_bin_expr.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/4-5_func_call_expr.go: [0;31m[fail]
+*****************************
+  Go output:
+*****************************
+3
+21
+*****************************
+  JS output:
+*****************************
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/davidherrera/Documents/Projects/go-js-website/server/compilers/goLiteJS/4-5_func_call_expr.js'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+./src/test/ml4/valid/4-7_select_expr.go: 

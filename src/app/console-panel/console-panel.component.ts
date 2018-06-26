@@ -1,15 +1,17 @@
-import { Component, OnInit, AfterViewInit, Input, ViewChild, OnDestroy} from '@angular/core';
+import { Component, OnInit, Input, ViewChild, OnDestroy, } from '@angular/core';
 import {CompilerRequestService} from '../compiler-request.service';
 import { Subscription } from 'rxjs/Subscription';
-
-declare const ace: any;
+import 'brace';
+import 'brace/index';
+import 'brace/theme/xcode';
+import 'brace/mode/text';
 
 @Component({
   selector: 'app-console-panel',
   templateUrl: './console-panel.component.html',
   styleUrls: ['./console-panel.component.css']
 })
-export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ConsolePanelComponent implements  OnInit, OnDestroy {
   @ViewChild('consoleEditor') consoleEditor;
   subscriptionError: Subscription;
   subscriptionRun: Subscription;
@@ -30,6 +32,7 @@ export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   constructor(private compilerRequestServer: CompilerRequestService) {
+
     this.subscriptionClear = compilerRequestServer.clearAnnounced$.subscribe(res => this.code = '');
     this.subscriptionError = compilerRequestServer.errorAnnounced$.subscribe( error => {
       this.code = error;
@@ -43,11 +46,8 @@ export class ConsolePanelComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   ngOnInit() {
-    this.consoleEditor.setTheme('xcode');
-  }
-
-  ngAfterViewInit() {
     this.consoleEditor.getEditor().setReadOnly(true);
+    this.consoleEditor.getEditor().$blockScrolling = Infinity;
   }
   ngOnDestroy() {
     this.subscriptionError.unsubscribe();

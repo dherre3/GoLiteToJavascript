@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "start-backend":"node server/server.js",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -24,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "@types/ace": "0.0.35",
+    "brace": "^0.10.0",
     "core-js": "^2.4.1",
     "ng2-ace-editor": "^0.2.5",
     "ng2-split-pane": "^1.4.0",

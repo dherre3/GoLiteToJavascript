@@ -1,5 +1,10 @@
 import { Component, ViewChild, Input, OnInit } from '@angular/core';
-declare var ace: any;
+import 'brace';
+import 'brace/index';
+import 'brace/theme/xcode';
+import 'brace/mode/golang';
+
+
 @Component({
   selector: 'app-left-panel',
   templateUrl: './left-panel.component.html',
@@ -32,7 +37,6 @@ func main() {
 }`;
   @ViewChild('editor') editor;
   ngOnInit() {
-    this.editor.setTheme('xcode');
     this.editor.getEditor().$blockScrolling = Infinity;
   }
 }

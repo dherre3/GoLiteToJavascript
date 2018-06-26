@@ -1,7 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { CompilerRequestService } from './compiler-request.service';
-
+import 'brace';
+import 'brace/index';
+import 'brace/theme/xcode';
+import 'brace/mode/text';
+import 'brace/mode/golang';
+import 'brace/mode/javascript';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +20,7 @@ export class AppComponent {
   @ViewChild(LeftPanelComponent)
   private leftPanelComponent: LeftPanelComponent;
 
-  constructor(private compilerService: CompilerRequestService) {
+  constructor(private compilerService: CompilerRequestService, private cdr: ChangeDetectorRef) {
 
   }
   compile() {
@@ -25,5 +30,7 @@ export class AppComponent {
   onHChange(e) {
     this.heightConsole = e.secondary;
     this.heightPanels = e.primary;
+    this.cdr.detectChanges();
+
   }
 }

@@ -1,6 +1,11 @@
 import {Component, OnInit, Input, OnDestroy, ViewChild} from '@angular/core';
 import { CompilerRequestService } from '../compiler-request.service';
 import { Subscription } from 'rxjs/Subscription';
+import 'brace';
+import 'brace/index';
+import 'brace/theme/xcode';
+import 'brace/mode/golang';
+import 'brace/mode/javascript';
 @Component({
   selector: 'app-right-panel',
   templateUrl: './right-panel.component.html',
@@ -21,6 +26,8 @@ export class RightPanelComponent implements OnInit, OnDestroy {
     }
   }
   constructor(private compilerService: CompilerRequestService) {
+    this.tabs = [ {editor: this.editorTarget, editorContent: ''},
+      {editor: this.editorPrettyTyped, editorContent: ''}];
     this.subscription = compilerService.programAnnounced$.subscribe(
       (code) => {
         this.tabs[0].editorContent = code.target;
@@ -30,10 +37,8 @@ export class RightPanelComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.editorTarget.setTheme('xcode');
-    this.editorPrettyTyped.setTheme('xcode');
-    this.tabs = [ {editor: this.editorTarget, editorContent: ''},
-                  {editor: this.editorPrettyTyped, editorContent: ''}];
+    this.editorTarget.getEditor().$blockScrolling = Infinity;
+    this.editorPrettyTyped.getEditor().$blockScrolling = Infinity;
   }
 
   onTabChange(e) {
@@ -41,7 +46,6 @@ export class RightPanelComponent implements OnInit, OnDestroy {
     const currentEditor = this.tabs[e.index].editor.getEditor();
     currentEditor.setValue(this.tabs[this.activeTab].editorContent);
     currentEditor.clearSelection();
-    currentEditor.$blockScrolling = Infinity;
   }
 
   ngOnDestroy() {

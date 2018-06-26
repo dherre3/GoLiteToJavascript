@@ -1,14 +1,14 @@
  <md-tab-group position="0" (selectChange)="onTabChange($event)">
     <md-tab label="Javascript Source"  style="overflow-y: scroll;">
       <div style="width:100%;overflow-y: scroll;"  [ngStyle]="{'height':_height}">
-        <ace-editor id="editorJavascript" #editorTarget  [(text)]="tabs[0].editorContent" [mode]="'javascript'" [options]="{maxLines: 'Infinity'}"
+        <ace-editor id="editorJavascript" #editorTarget  [(text)]="tabs[0].editorContent" mode="javascript" theme="xcode" [options]="{maxLines: 'Infinity'}"
                     style="min-height: 100%; width:100%; overflow: auto;"></ace-editor>
       </div>
     </md-tab>
     <md-tab label="Pretty Typed" >
 
       <div style="width:100%;overflow-y: scroll;" [ngStyle]="{'height':_height}">
-        <ace-editor id="editorPrettyType" #editorPrettyTyped  [(text)]="tabs[1].editorContent" [mode]="'golang'" [options]="{maxLines: 'Infinity',theme:'xcode'}"
+        <ace-editor id="editorPrettyType" #editorPrettyTyped  [(text)]="tabs[1].editorContent" mode="golang" theme="xcode" [options]="{maxLines: 'Infinity',theme:'xcode'}"
                     style="min-height: 100%; width:100%; overflow: auto;"></ace-editor>
       </div>
     </md-tab>
