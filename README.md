@@ -1,6 +1,13 @@
 # GoJsWebsite
+<img src="./images/main_screen.png" alt="drawing" width="500px"/>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This website is a display for my compiler projects.
+So far I have added one compiler, a complete compiler from a subset
+of Go Lang to JavaScript written in C. 
+
+
+
+
 
 ## Development server
 
