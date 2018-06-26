@@ -1,5 +1,5 @@
 # GoJsWebsite
-<img src="./images/main_screen.png" alt="drawing" width="100vw"/>
+<img src="./images/main_screen.png" alt="drawing" width="1000px"/>
 
 This website is a display for my compiler projects.
 So far I have added one compiler, a complete compiler from a subset
