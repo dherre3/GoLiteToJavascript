@@ -4,8 +4,10 @@
 This website is a display for my compiler projects.
 So far I have added one compiler, a complete compiler from a subset
 of Go Lang to JavaScript written in C. 
-
-
+Here is the link to the site: [GoLiteJS](https://www.cs.mcgill.ca/~dherre3/golitejs/dist/).
+Full disclosure there are some cases that need to be handled
+when sending the program to be compiled in the server. It seems that there
+are certain characters the http request is getting rid of. i.e. (+)
 
 
 
