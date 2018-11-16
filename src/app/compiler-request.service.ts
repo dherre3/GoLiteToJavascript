@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
-import {CustomEncoder} from "./custom-encoder.class";
+import {CustomEncoder} from './custom-encoder.class';
 @Injectable()
 export class CompilerRequestService {
   private programSubject = new Subject<any>();
